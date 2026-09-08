@@ -65,6 +65,7 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
   }
 
   body {
@@ -80,6 +81,11 @@
 @layer utilities {
   .font-display {
     font-family: "Instrument Serif", serif;
+  }
+
+  .viewport-panel {
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
   }
 
   .section-label {
@@ -138,7 +144,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
+  html {
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+  }
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
