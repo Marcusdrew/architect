@@ -85,7 +85,7 @@
 
   .viewport-panel {
     scroll-snap-align: start;
-    scroll-snap-stop: normal;
+    scroll-snap-stop: always;
   }
 
   .section-label {
