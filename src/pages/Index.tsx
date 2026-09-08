@@ -94,7 +94,7 @@ const Index = () => {
       </header>
 
       <main>
-        <section id="accueil" className="relative flex min-h-screen items-center pt-28">
+        <section id="accueil" className="viewport-panel relative flex min-h-[100svh] items-center pt-28">
           <div className="mx-auto grid w-full max-w-[1600px] items-end gap-12 px-5 pb-16 md:px-10 lg:grid-cols-12 lg:px-16 lg:pb-20">
             <div className="relative z-10 lg:col-span-7 lg:pb-6">
               <p className="reveal mb-8 text-xs font-medium uppercase text-primary">Architecture · Intérieurs · Territoires</p>
@@ -127,7 +127,7 @@ const Index = () => {
           </a>
         </section>
 
-        <section id="expertise" className="border-y border-border bg-secondary py-24 md:py-36">
+        <section id="expertise" className="viewport-panel flex min-h-[100svh] items-center border-y border-border bg-secondary py-24 md:py-28">
           <div className="mx-auto max-w-[1600px] px-5 md:px-10 lg:px-16">
             <div className="grid gap-12 lg:grid-cols-12">
               <p className="section-label lg:col-span-3">Notre approche</p>
@@ -147,9 +147,9 @@ const Index = () => {
           </div>
         </section>
 
-        <section id="projets" className="py-24 md:py-36">
+        <section id="projets" className="py-20 md:py-24">
           <div className="mx-auto max-w-[1600px] px-5 md:px-10 lg:px-16">
-            <div className="mb-16 flex items-end justify-between gap-8">
+            <div className="viewport-panel flex min-h-[42svh] items-end justify-between gap-8 pb-14 md:pb-16">
               <div>
                 <p className="section-label">Projets choisis</p>
                 <h2 className="mt-5 font-display text-5xl md:text-7xl">Des lieux à ressentir.</h2>
@@ -157,10 +157,10 @@ const Index = () => {
               <p className="hidden max-w-xs text-sm leading-6 text-muted-foreground md:block">Chaque projet est une réponse unique à un climat, une histoire et une manière d’habiter.</p>
             </div>
 
-            <div className="space-y-24 md:space-y-36">
+            <div>
               {projects.map((project, index) => (
-                <article key={project.title} className={index === 1 ? "md:ml-[17%]" : "md:mr-[9%]"}>
-                  <div className="project-image aspect-[3/2] overflow-hidden bg-muted">
+                <article key={project.title} className={`viewport-panel flex min-h-[100svh] flex-col justify-center py-12 md:py-16 ${index === 1 ? "md:ml-[17%]" : "md:mr-[9%]"}`}>
+                  <div className="project-image aspect-[3/2] max-h-[58svh] overflow-hidden bg-muted">
                     <img src={project.image} alt={project.title} width={project.width} height={project.height} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 hover:scale-[1.02]" />
                   </div>
                   <div className="mt-7 grid gap-4 md:grid-cols-12">
@@ -176,7 +176,7 @@ const Index = () => {
           </div>
         </section>
 
-        <section id="studio" className="bg-foreground py-24 text-background md:py-36">
+        <section id="studio" className="viewport-panel flex min-h-[100svh] items-center bg-foreground py-24 text-background md:py-28">
           <div className="mx-auto max-w-[1600px] px-5 md:px-10 lg:px-16">
             <div className="grid gap-16 lg:grid-cols-12">
               <div className="lg:col-span-7">
@@ -198,7 +198,7 @@ const Index = () => {
           </div>
         </section>
 
-        <section id="contact" className="bg-primary py-24 text-primary-foreground md:py-36">
+        <section id="contact" className="viewport-panel flex min-h-[100svh] items-center bg-primary py-24 text-primary-foreground md:py-28">
           <div className="mx-auto max-w-[1600px] px-5 md:px-10 lg:px-16">
             <p className="text-xs uppercase text-primary-foreground/70">Votre projet commence ici</p>
             <div className="mt-8 flex flex-col items-start justify-between gap-12 lg:flex-row lg:items-end">
