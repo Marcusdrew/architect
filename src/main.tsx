@@ -4,7 +4,13 @@ import App from "./App.tsx";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "./index.css";
 
-createRoot(document.getElementById("root")!).render(
+const rootElement = document.getElementById("root");
+
+if (!rootElement) {
+  throw new Error("Élément racine introuvable");
+}
+
+createRoot(rootElement).render(
   <StrictMode>
     <ThemeProvider defaultTheme="system" storageKey="architecture-theme">
       <App />
